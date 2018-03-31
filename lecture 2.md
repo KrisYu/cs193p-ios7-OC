@@ -21,7 +21,7 @@
 
 @end
 ```
-首先这个cards是一个 private NSMutableArray cards, 其次我们调用了它的getter,当我们
+首先这个cards是一个 private NSMutableArray cards, 其次我们调用了它的getter,当我们调用的时候我们检查了_cards是否存在，如果它不存在的话我们就用alloc init来init它。
 
 - OC 会有这种错误 ： array index out of bounds， 所以 swift optional 的设计可以避免我们写这种形式的if
 - @"string" ->  string objects, @[@"1", @"2", @"3"] 创建一个NSArray. 理论上来说我们一般不用 @synthesize, 但是一旦我们implement getter 和 setter 之后，我们需要创建它，把这个synthesize明确的写出来。
